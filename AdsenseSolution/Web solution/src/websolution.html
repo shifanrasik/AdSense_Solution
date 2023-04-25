@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Solution</title>
+    <link rel="stylesheet" href="styles/websolution.css">
+    <script type="text/javascript" src="script/websolution.js"></script>
+</head>
+<body>
+   <div class="row">
+       <!--First paragraph-->
+       <div class="first">
+           <h1>Web Solution</h1>
+           <h2>Intelligently Crafted Designs <br>That Resonate</h2>
+           <p>
+            An intelligent approach that<br>
+            combines user interaction, device<br>
+            compatibility, and the right mix of<br>
+            platforms to drive engagement,<br>
+            performance, and change.<br>
+            Customized design for your brand,<br>
+            lovingly designed<br>
+           </p>
+       </div>
+       <!--/First paragraph-->
+       <div class="image1">
+           <img src="image/img1.jpg" alt="" class="img1">
+           <br>
+       </div>
+   </div> 
+<br>
+<br>
+
+<div id="approach">
+   <h2>Our approach to unique web design based on performance</h2>
+<p style="font-size: 18px;">
+    For us, templates are a thing of the past. Our unique component-based<br>
+    architectural approach enables us to create dynamic websites that can<br>
+    be changed on the fly based on user travels and contact data. We guar<br>
+    antee a unique web design every time, specifically designed for your<br>
+    brand and analyzing your potential customers, competitors, and industry.<br>
+    The performance will always be at the heart of our web design strategy<br>
+    and we make sure your website is optimized for multiple devices, faster<br>
+    downloads, and search engines as it is on a 4k desktop with a 4-inch screen.<br>
+    Whether you like a simple online brochure or plan to dominate your market<br>
+     with a great e-commerce site, we are the web development company for you.<br>
+</p>
+</div>   
+
+<section class="home">
+    
+    <div class="container">
+        
+       <div class="row">
+        
+           <div class="home-text">
+            <h1 >Our Approach</h1>
+                <br>
+                <p class="animate-text">
+                   <span>Strategy</span>
+                   <span>Information Architecture</span>
+                   <span>Website Design</span>
+                   <span>Development</span>
+                   <span>QA and Testing</span>
+                   <span>Launch</span>
+                </p>
+           </div>
+       </div>
+    </div>
+</section>
+
+
+
+<script>
+        const txts=document.querySelector(".animate-text").children,
+              txtsLen=txts.length;
+          let index=0;
+         const textInTimer=3000,
+               textOutTimer=2800;
+
+        function animateText() {
+           for(let i=0; i<txtsLen; i++){
+             txts[i].classList.remove("text-in","text-out");  
+           }
+           txts[index].classList.add("text-in");
+
+           setTimeout(function(){
+               txts[index].classList.add("text-out");              
+           },textOutTimer)
+
+           setTimeout(function(){
+
+             if(index == txtsLen-1){
+                 index=0;
+               }
+              else{
+                  index++;
+                }
+               animateText();
+           },textInTimer); 
+        }
+        
+        window.onload=animateText;
+  
+</script>
+<br>
+<div>
+    <img class="img3" src="image/img3.jpg">
+</div>
+<br>
+<h1>Recent works</h1>
+<br>
+<div class="imgrecent">
+    <div>
+        
+        <a href="https://www.olankatravels.com/"><img src="image/img4.jpg" alt="" id="img4"></a>
+    <div class="text1"><a href="https://www.olankatravels.com/"><span>Olanka travels<br>Travel & Hospitality</span></a></div>
+    
+    </div>
+    <div>
+        
+        <a href="https://unionassurance.com/"><img src="image/img5.jpg" alt="" id="img5"></a>
+    <div class="text2"><a href="https://unionassurance.com/"><span>Union Insurence<br> E-Commerce and Retail</span></a></div>
+    
+    </div>
+
+    <div>
+        
+        <a href="https://www.rettech.net/"><img src="image/img6.jpg" alt="" id="img6"></a>
+    <div class="text3"><a href="https://www.rettech.net/"><span>Ret Tech<br>Technology</span></a></div>
+    
+    </div>
+</div>
+<br>
+<br>
+<!--Form-->
+<div class="wrapper">
+    <div class="title">
+        CONTACT FOR<br>
+        QUICK CUSTOM QUOTE
+    </div>
+    <form class="form" method="post" action="php/formsweb.php">
+       <div class="inputfield">
+          <label>Name</label>
+          <input type="text" name="name"  class="input">
+       </div>  
+        <div class="inputfield">
+          <label>Phone</label>
+          <input type="text" name="phone" class="input">
+       </div>  
+       <div class="inputfield">
+          <label>Email</label>
+          <input type="Email" name="emailid" class="input">
+       </div>  
+      <div class="inputfield">
+          <label>Brand Name</label>
+          <input type="text" name="bname" class="input">
+       </div> 
+        <div class="inputfield">
+          <label>Select consultancy</label>
+          <div class="custom_select">
+            <select name="ctype">
+                <option value="">Select</option>
+                <option value="digitaltransformation">digital Transformation</option>
+                <option value="searchengineoptimization">Search Engine Optimization</option>
+                <option value="socialmediaadvertising">socialmediaadvertising</option>
+                <option value="socialmediamanagement">Social media Management</option>
+                <option value="conversionrateoptimization">Conversion rate optimization</option>
+                <option value="PayPerClickMarketing">Pay -Per-Click Marketing</option>
+                <option value="influencermarketing">Influencer Marketing</option>
+                <option value="emailmarketing">Email Marketing</option>
+            </select>
+          </div>
+       </div> 
+        
+       
+      
+       
+      
+      <div class="inputfield">
+        <input type="submit" value="submit" class="btn">
+      </div>
+    </form>
+</div>
+<!--/Form-->
+</body>
+</html>
